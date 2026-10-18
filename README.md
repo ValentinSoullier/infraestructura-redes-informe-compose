@@ -87,7 +87,7 @@ El `my.cnf` real tiene los datos de conexión del exporter: usuario `root`, la c
 ![Conexiones a MySQL](imagenes/08-mysql-conexiones.png)
 *Conexiones activas en MySQL (2), consultadas a través del `dbexporter`.*
 
----
+**En la práctica:** `docker-compose ps` mostró `mysql` y `dbexporter` en estado Up, y la consulta `mysql_global_status_threads_connected` devolvió 2 conexiones activas.
 
 ## Parte 2: Recolección de métricas (`cadvisor` y `prometheus`)
 
