@@ -18,7 +18,9 @@ Además, la app Flask de la práctica corre fuera de Compose, en el host, y expo
 
 La diferencia entre **métrica** y **log**: una métrica es un número que cambia en el tiempo (sirve para ver tendencias y picos), mientras que un log es un evento puntual con todo su detalle.
 
-El setup se ejecutó con `bash /root/setup.sh`, que levanta todo el entorno:
+El setup se ejecutó con Entorno usado: Killercoda, con Grafana 13.2.2 y docker-compose.
+
+
 
 ![Inicio del setup](imagenes/01-setup-inicio.png)
 *Ejecución del script de preparación del entorno.*
@@ -230,3 +232,6 @@ Cada parte del archivo cumple un papel: `mysql` y `dbexporter` ponen los datos y
 La diferencia con la práctica anterior es que los logs permiten investigar el detalle de lo que pasó después del incidente, mientras que las métricas permiten detectar el pico mientras ocurre. En un entorno real se usan las dos cosas.
 
 Como mejoras, el archivo podría escribirse hoy sin `version:`, con versiones fijas en lugar de `latest`, la contraseña en un `.env` fuera de Git, un volumen con nombre para los datos de MySQL, y un `healthcheck` con `condition: service_healthy` para que `dbexporter` espere a que MySQL esté realmente listo.
+
+
+Lo más claro de la práctica fue ver el pico mientras ocurría, sin tener que buscarlo después en los logs.
