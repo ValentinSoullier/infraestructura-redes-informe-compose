@@ -219,7 +219,7 @@ Prueba de carga, 2000 peticiones con 50 en simultáneo:
 ![Pico de conexiones a MySQL](imagenes/17-mysql-pico-y-bajada.png)
 *Pico de conexiones a MySQL y posterior bajada.*
 
----
+**En la práctica:** el data source se guardó con `http://prometheus:9090` y Save & test confirmó la conexión. Durante el stress test, las conexiones a MySQL subieron de 2 a unas 50.
 
 ## Conclusión
 
