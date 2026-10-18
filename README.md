@@ -115,7 +115,8 @@ prometheus:
     - "host.docker.internal:host-gateway"
   networks:
     - mynetwork
-```
+
+**En la práctica:** Prometheus tenía los cuatro targets en UP. La CPU del contenedor de MySQL tuvo un pico de unos 0,12 al arrancar y después se estabilizó cerca de 0,006.
 
 **Qué hace cada servicio.** `cadvisor` mide el uso de recursos de todos los contenedores del host y los expone como métricas. `prometheus` va a buscar esas métricas (y las de MySQL y la app) a intervalos regulares, según lo que dice `prometheus.yml`.
 
